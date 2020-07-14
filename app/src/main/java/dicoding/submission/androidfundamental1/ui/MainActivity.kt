@@ -1,8 +1,11 @@
-package dicoding.submission.androidfundamental1
+package dicoding.submission.androidfundamental1.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import dicoding.submission.androidfundamental1.ItemAdapter
+import dicoding.submission.androidfundamental1.ItemModel
+import dicoding.submission.androidfundamental1.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.isSmoothScrollbarEnabled = true
         github_user_list.layoutManager = layoutManager
-        github_user_list.adapter = ItemAdapter(UserGithubList)
+        github_user_list.adapter =
+            ItemAdapter(UserGithubList)
         getData()
     }
 
